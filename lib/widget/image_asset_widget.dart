@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ImageAss extends StatelessWidget {
-  const ImageAss({super.key, required this.image});
+class ImageAssetWidget extends StatelessWidget {
+  const ImageAssetWidget({super.key, required this.image});
 
   final String image;
 

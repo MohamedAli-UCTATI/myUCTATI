@@ -13,7 +13,8 @@ class Carousel extends StatelessWidget {
       child: ClipRRect(
           borderRadius: BorderRadius.circular(20),
           child: CarouselSlider(
-            items: images.map((image) => ImageAss(image: image)).toList(),
+            items:
+                images.map((image) => ImageAssetWidget(image: image)).toList(),
             options: CarouselOptions(
                 viewportFraction: 1,
                 initialPage: 0, // Set the initial page index
