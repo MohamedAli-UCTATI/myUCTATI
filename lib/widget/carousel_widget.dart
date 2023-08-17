@@ -1,7 +1,7 @@
-import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/material.dart';
 import 'package:UCTATI/widget/image_asset_widget.dart';
 import 'package:UCTATI/data/carousel.dart';
-import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class Carousel extends StatelessWidget {
   const Carousel({super.key});

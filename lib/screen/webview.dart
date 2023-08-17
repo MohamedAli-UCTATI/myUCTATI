@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:UCTATI/provider/provider.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:UCTATI/provider/provider.dart';
 
 class WebViewPage extends ConsumerStatefulWidget {
   final String title;

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:UCTATI/screen/webview.dart';
 import 'package:UCTATI/model/griditem.dart';
+import 'package:UCTATI/provider/provider.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:UCTATI/provider/provider.dart';
 
 class GridBuilder extends ConsumerWidget {
   const GridBuilder({

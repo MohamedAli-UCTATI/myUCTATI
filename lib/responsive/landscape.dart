@@ -1,15 +1,12 @@
+import 'package:flutter/material.dart';
 import 'package:UCTATI/data/data.dart';
 import 'package:UCTATI/screen/webview.dart';
-import 'package:flutter/material.dart';
-import 'package:UCTATI/widget/gridbuiler.dart';
 import 'package:UCTATI/model/griditem.dart';
+import 'package:UCTATI/provider/provider.dart';
+import 'package:UCTATI/widget/widgets.dart';
+import 'package:icons_flutter/icons_flutter.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:url_launcher/url_launcher.dart';
-import 'package:UCTATI/widget/icon_button_widget.dart';
-import 'package:UCTATI/widget/carousel_widget.dart';
-import 'package:icons_flutter/icons_flutter.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:UCTATI/provider/provider.dart';
 
 class Landscape extends ConsumerStatefulWidget {
   const Landscape({super.key});

@@ -1,6 +1,5 @@
-import 'package:UCTATI/responsive/landscape.dart';
 import 'package:flutter/material.dart';
-import 'package:UCTATI/responsive/portrait.dart';
+import 'package:UCTATI/responsive/orientation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
