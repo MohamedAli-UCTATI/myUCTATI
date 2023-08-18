@@ -39,6 +39,7 @@ dependencies:
   shared_preferences: ^2.2.0
   icons_flutter: ^0.0.4
   flutter_riverpod: ^2.3.6
+  url_strategy: ^0.2.0
 
 
 dev_dependencies:
