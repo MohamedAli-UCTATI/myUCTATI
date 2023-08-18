@@ -4,6 +4,7 @@ import 'package:UCTATI/screen/webview.dart';
 import 'package:UCTATI/model/griditem.dart';
 import 'package:UCTATI/provider/provider.dart';
 import 'package:UCTATI/widget/widgets.dart';
+import 'package:UCTATI/util/constant.dart';
 import 'package:icons_flutter/icons_flutter.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:url_launcher/url_launcher.dart';
@@ -120,8 +121,7 @@ class _Landscape extends ConsumerState<Landscape> {
                     ),
                     IconButtonWidget(
                       title: "Privacy policy",
-                      url:
-                          "https://docs.google.com/document/d/1koTUejBkSzXAfBnWJLprgtVg3t8r3OdRxAHR0MjKUiA",
+                      url: Constant.urlPrivacyPolicy,
                       color: iconColor,
                       icon: Icons.privacy_tip_outlined,
                     ),
@@ -129,27 +129,25 @@ class _Landscape extends ConsumerState<Landscape> {
                   actions: [
                     IconButtonWidget(
                       title: "Facebook",
-                      url: "https://www.facebook.com/UCTATIofficial/",
+                      url: Constant.urlFacebook,
                       color: iconColor,
                       icon: FontAwesome.facebook,
                     ),
                     IconButtonWidget(
                       title: "Instagram",
-                      url: "https://www.instagram.com/uctati_official/",
+                      url: Constant.urlInstagram,
                       color: iconColor,
                       icon: FontAwesome.instagram,
                     ),
                     IconButtonWidget(
                       title: "Twitter",
-                      url:
-                          "https://twitter.com/i/flow/login?redirect_after_login=%2Fuctati",
+                      url: Constant.urlTwitter,
                       color: iconColor,
                       icon: FontAwesome.twitter,
                     ),
                     IconButtonWidget(
                       title: "LinkedIn",
-                      url:
-                          "https://www.linkedin.com/school/university-college-tati-official/",
+                      url: Constant.urlLinkedin,
                       color: iconColor,
                       icon: FontAwesome.linkedin,
                     ),
@@ -200,9 +198,7 @@ class _Landscape extends ConsumerState<Landscape> {
                   ),
                   onPressed: () {
                     kIsWeb
-                        ? launchUrl(
-                            Uri.parse(
-                                "https://drive.google.com/file/d/10lmjSv3fAvqAu7msDdGvwE5-9MgksxXA/view?pli=1"),
+                        ? launchUrl(Uri.parse(Constant.urlAcademic),
                             webViewConfiguration: const WebViewConfiguration(
                                 enableJavaScript: true),
                             mode: LaunchMode.externalNonBrowserApplication)
@@ -211,10 +207,8 @@ class _Landscape extends ConsumerState<Landscape> {
                             MaterialPageRoute(
                               builder: (context) => const WebViewPage(
                                 title: "Academic Guidelines",
-                                url:
-                                    "https://drive.google.com/file/d/10lmjSv3fAvqAu7msDdGvwE5-9MgksxXA/view?pli=1",
-                                launchUrl:
-                                    "https://drive.google.com/uc?export=download&id=10lmjSv3fAvqAu7msDdGvwE5-9MgksxXA",
+                                url: Constant.urlAcademic,
+                                launchUrl: Constant.urlAcademicLaunch,
                                 icon: Icons.download,
                               ),
                             ),
