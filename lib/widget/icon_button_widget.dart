@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:UCTATI/screen/webview.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
+import 'dart:io' show Platform;
 
 class IconButtonWidget extends StatelessWidget {
   const IconButtonWidget(
@@ -22,7 +23,7 @@ class IconButtonWidget extends StatelessWidget {
       color: color,
       icon: Icon(icon),
       onPressed: () {
-        kIsWeb
+        (kIsWeb || Platform.isMacOS || Platform.isWindows)
             ? launchUrl(Uri.parse(url),
                 webViewConfiguration:
                     const WebViewConfiguration(enableJavaScript: true),

@@ -8,6 +8,7 @@ import 'package:UCTATI/util/constant.dart';
 import 'package:icons_flutter/icons_flutter.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:url_launcher/url_launcher.dart';
+import 'dart:io' show Platform;
 
 class Portrait extends ConsumerStatefulWidget {
   const Portrait({super.key});
@@ -183,7 +184,7 @@ class _PortraitState extends ConsumerState<Portrait> {
           ),
         ),
         onPressed: () {
-          kIsWeb
+          (kIsWeb || Platform.isMacOS || Platform.isWindows)
               ? launchUrl(Uri.parse(Constant.urlAcademic),
                   webViewConfiguration:
                       const WebViewConfiguration(enableJavaScript: true),

@@ -4,6 +4,7 @@ import 'package:UCTATI/model/griditem.dart';
 import 'package:UCTATI/provider/provider.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:url_launcher/url_launcher.dart';
+import 'dart:io' show Platform;
 
 class GridBuilder extends ConsumerWidget {
   const GridBuilder({
@@ -30,7 +31,7 @@ class GridBuilder extends ConsumerWidget {
             InkWell(
               borderRadius: BorderRadius.circular(25.0),
               onTap: () {
-                kIsWeb
+                (kIsWeb || Platform.isMacOS || Platform.isWindows)
                     ? launchUrl(Uri.parse(item.url),
                         webViewConfiguration:
                             const WebViewConfiguration(enableJavaScript: true),
