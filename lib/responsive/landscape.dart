@@ -10,6 +10,8 @@ import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:io' show Platform;
 
+import '../common/pallete.dart';
+
 class Landscape extends ConsumerStatefulWidget {
   const Landscape({super.key});
 
@@ -42,9 +44,10 @@ class _Landscape extends ConsumerState<Landscape> {
   Widget build(BuildContext context) {
     final isDarkMode = ref.watch(darkModeProvider) ??
         MediaQuery.of(context).platformBrightness == Brightness.dark;
-    final iconColor = isDarkMode ? Colors.white : Colors.black;
-    final textColor = isDarkMode ? Colors.white : Colors.black;
-    final backgroundColor = isDarkMode ? Colors.black : Colors.white;
+    final pallette = Pallette(isDarkMode);
+    final iconColor = pallette.iconColor;
+    final textColor = pallette.textColor;
+    final backgroundColor = pallette.backgroundColor;
 
     return SafeArea(
       child: Scaffold(

@@ -1,3 +1,4 @@
+import 'package:UCTATI/common/pallete.dart';
 import 'package:flutter/material.dart';
 import 'package:UCTATI/data/data.dart';
 import 'package:UCTATI/screen/webview.dart';
@@ -42,9 +43,10 @@ class _PortraitState extends ConsumerState<Portrait> {
   Widget build(BuildContext context) {
     final isDarkMode = ref.watch(darkModeProvider) ??
         MediaQuery.of(context).platformBrightness == Brightness.dark;
-    final iconColor = isDarkMode ? Colors.white : Colors.black;
-    final textColor = isDarkMode ? Colors.white : Colors.black;
-    final backgroundColor = isDarkMode ? Colors.black : Colors.white;
+    final pallette = Pallette(isDarkMode);
+    final iconColor = pallette.iconColor;
+    final textColor = pallette.textColor;
+    final backgroundColor = pallette.backgroundColor;
 
     return Scaffold(
       backgroundColor: backgroundColor,
