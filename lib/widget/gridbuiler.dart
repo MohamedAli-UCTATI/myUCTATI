@@ -6,6 +6,8 @@ import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:io' show Platform;
 
+import '../common/pallete.dart';
+
 class GridBuilder extends ConsumerWidget {
   const GridBuilder({
     super.key,
@@ -21,6 +23,11 @@ class GridBuilder extends ConsumerWidget {
     final widthSize = MediaQuery.of(context).size.width;
     final heightSize = MediaQuery.of(context).size.width;
     final isLargeScreen = widthSize > 600;
+    final pallette = Pallette(isDarkMode);
+    final iconColor = pallette.iconColor;
+    final textColor = pallette.textColor;
+    final cardColor = pallette.cardColor;
+    final carkSurfaceTintColor = pallette.cardSurfaceTintColor;
 
     return Wrap(
         alignment: WrapAlignment.center,
@@ -51,10 +58,8 @@ class GridBuilder extends ConsumerWidget {
                 width: !isLargeScreen ? widthSize / 3 : heightSize / 6,
                 height: !isLargeScreen ? widthSize / 3 : heightSize / 6,
                 child: Card(
-                  surfaceTintColor: isDarkMode
-                      ? const Color.fromARGB(255, 50, 50, 50)
-                      : Colors.white,
-                  color: isDarkMode ? Colors.white10 : Colors.white,
+                  surfaceTintColor: carkSurfaceTintColor,
+                  color: cardColor,
                   elevation: 5,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25),
@@ -65,7 +70,7 @@ class GridBuilder extends ConsumerWidget {
                       Icon(
                         item.icon,
                         size: !isLargeScreen ? widthSize / 16 : heightSize / 32,
-                        color: isDarkMode ? Colors.white : Colors.black,
+                        color: iconColor,
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -77,7 +82,7 @@ class GridBuilder extends ConsumerWidget {
                             fontSize: !isLargeScreen
                                 ? widthSize / 40
                                 : heightSize / 80,
-                            color: isDarkMode ? Colors.white : Colors.black,
+                            color: textColor,
                           ),
                         ),
                       ),
