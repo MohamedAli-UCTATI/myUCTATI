@@ -4,7 +4,7 @@ import 'package:UCTATI/screen/webview.dart';
 import 'package:UCTATI/model/griditem.dart';
 import 'package:UCTATI/provider/provider.dart';
 import 'package:UCTATI/widget/widgets.dart';
-import 'package:UCTATI/util/constant.dart';
+import 'package:UCTATI/common/constant.dart';
 import 'package:icons_flutter/icons_flutter.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:url_launcher/url_launcher.dart';
